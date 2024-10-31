@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="quiz-section">
+      <h1>Quiz</h1>
+      <form id="quiz-form">
+        <div class="question">
+          <p>1. What is digital citizenship?</p>
+          <input type="radio" name="q1" value="a" /> A. Using technology to communicate<br />
+          <input type="radio" name="q1" value="b" /> B. Understanding the norms of appropriate, responsible behavior with regard to technology use<br />
+          <input type="radio" name="q1" value="c" /> C. Using social media<br />
+        </div>
+        <div class="question">
+          <p>2. What is digital literacy?</p>
+          <input type="radio" name="q2" value="a" /> A. Using technology to communicate<br />
+          <input type="radio" name="q2" value="b" /> B. Understanding the norms of appropriate, responsible behavior with regard to technology use<br />
+          <input type="radio" name="q2" value="c" /> C. Developing skills to use ICT tools effectively and safely for communication, investigation, and creation<br />
+        </div>
+        <div class="question">
+          <p>3. What is digital safety?</p>
+          <input type="radio" name="q3" value="a" /> A. Using technology to communicate<br />
+          <input type="radio" name="q3" value="b" /> B. Learning how to use technology safely and responsibly<br />
+          <input type="radio" name="q3" value="c" /> C. Using social media<br />
+        </div>
+        <div class="question">
+          <p>4. What is the impact of digital actions on wellbeing?</p>
+          <input type="radio" name="q4" value="a" /> A. Positive<br />
+          <input type="radio" name="q4" value="b" /> B. Negative<br />
+          <input type="radio" name="q4" value="c" /> C. Both positive and negative<br />
+        </div>
+        <div class="question">
+          <p>5. What are ICT tools?</p>
+          <input type="radio" name="q5" value="a" /> A. Information and Communication Technology tools<br />
+          <input type="radio" name="q5" value="b" /> B. Internet and Communication Technology tools<br />
+          <input type="radio" name="q5" value="c" /> C. Information and Computer Technology tools<br />
+        </div>
+        <div class="question">
+          <p>6. How can you use ICT tools effectively?</p>
+          <input type="radio" name="q6" value="a" /> A. By learning how to use them safely and responsibly<br />
+          <input type="radio" name="q6" value="b" /> B. By using them for communication<br />
+          <input type="radio" name="q6" value="c" /> C. By using them for social media<br />
+        </div>
+        <button type="button" onclick="submitQuiz()">Submit</button>
+      </form>
+      <div id="result"></div>
+    </section>
+
+    <script>
+      function submitQuiz() {
+        const answers = {
+          q1: 'b',
+          q2: 'c',
+          q3: 'b',
+          q4: 'c',
+          q5: 'a',
+          q6: 'a'
+        };
+
+        let score = 0;
+        const form = document.getElementById('quiz-form');
+        const formData = new FormData(form);
+
+        for (const [question, answer] of Object.entries(answers)) {
+          if (formData.get(question) === answer) {
+            score++;
+          }
+        }
+
+        const result = document.getElementById('result');
+        result.innerHTML = `You scored ${score} out of 6.`;
+      }
+    </script>
+  </body>
+</html>

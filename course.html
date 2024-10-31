@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>University Website</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <section class="sub-header">
+      <nav>
+        <a href="index.html"><img src="./images/logo.png" alt="" /></a>
+        <div class="nav-links" id="navLinks">
+          <i class="fa-solid fa fa-xmark" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="./index.html">HOME</a></li>
+            <li><a href="./about.html">ABOUT</a></li>
+            <li><a href="./course.html">LEARN</a></li>
+            <li><a href="./blog.html">BLOG</a></li>
+            <li><a href="./contact.html">CONTACT</a></li>
+          </ul>
+        </div>
+        <i class="fa-solid fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+      <h1>Our Courses</h1>
+    </section>
+
+    <!-- Course Section -->
+    <section class="course">
+      <h1>Courses We Offer</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <div class="course-row">
+        <div class="course-col">
+          <h3>Digital Citizenship</h3>
+          <div class="video-container">
+            <video width="560" height="315" controls>
+              <source src="./videos/video1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <p>Understanding the norms of appropriate, responsible behavior with regard to technology use.</p>
+          <button class="quiz-btn" onclick="location.href='quiz.html'">Quiz</button>
+        </div>
+      </div>
+      <div class="course-row">
+        <div class="course-col">
+          <h3>Digital Literacy, Practising digital safety and wellbeing</h3>
+          <div class="video-container">
+            <video width="560" height="315" controls>
+              <source src="./videos/video2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <p>Learning how to use technology safely and responsibly, and understanding the impact of digital actions on wellbeing.</p>
+          <button class="quiz-btn" disabled>Quiz</button>
+        </div>
+      </div>
+      <div class="course-row">
+        <div class="course-col">
+          <h3>Digital Literacy – what are digital literacy skills? Using ICT tools effectively and safely to communicate, investigate, and create</h3>
+          <div class="video-container">
+            <video width="560" height="315" controls>
+              <source src="./videos/video3.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <p>Developing skills to use ICT tools effectively and safely for communication, investigation, and creation.</p>
+          <button class="quiz-btn" disabled>Quiz</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <section class="facilities">
+      <h1>Our Facilities</h1>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+      <div class="row">
+        <div class="facilities-col">
+          <img src="./images/library.png" alt="">
+          <h3>World Class Library</h3>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit delectus, voluptate fuga blanditiis saepe mollitia odio accusantium nulla reprehenderit vero?</p>
+        </div>
+        <div class="facilities-col">
+          <img src="./images/basketball.png" alt="">
+          <h3>Largest Play Ground</h3>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit delectus, voluptate fuga blanditiis saepe mollitia odio accusantium nulla reprehenderit vero?</p>
+        </div>
+        <div class="facilities-col">
+          <img src="./images/cafeteria.png" alt="">
+          <h3>Tasty And Healthy Food</h3>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit delectus, voluptate fuga blanditiis saepe mollitia odio accusantium nulla reprehenderit vero?</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <section class="footer">
+      <h4>About Us</h4>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur error asperiores vero vel incidunt sit!</p>
+      <div class="icons">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-linkedin"></i>
+      </div>
+      <p>Made by Minatallah Al Kaaby</p>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
